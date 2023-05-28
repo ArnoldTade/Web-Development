@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	height: 100vh;
+	padding: 10px;
+	background: linear-gradient(135deg, #fff5e6, #52143d);
+}
+
+.card{
+	
+	margin: 0 auto;
+	height: 450px;
+	width: 335px;
+	padding: 20px 35px;
+	background: #fff5e6;
+	border-radius: 20px;
+	
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.card h5{
+	text-align: center;
+
+}
+ .card i{
+	font-size: 70px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: #52143d;
+}
+
+span{
+	color: #a4287b;
+}
