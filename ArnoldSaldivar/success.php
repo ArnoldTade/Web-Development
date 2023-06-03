@@ -2,9 +2,11 @@
     $title = 'Success';
     require_once 'includes/header.php';
     require_once 'db/conn.php';
-    require_once 'sendemail.php';
+  
     
+
 if(isset($_POST['submit'])){
+    //extract values from the $_POST array
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $dob = $_POST['dob'];
@@ -18,11 +20,12 @@ if(isset($_POST['submit'])){
     $destination = "$target_dir$contact.$ext";
     move_uploaded_file($orig_file,$destination);
 
+    //call function to insert and track if success or not
     $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty, $destination);
     $specialtyName = $crud->getSpecialtyById($specialty);
 
     if($isSuccess){
-        SendEmail::SendMail($email, 'Welcome to IT Conference 2023', 'You have successfully registered for this year\'s IT Conference');
+      //  SendEmail::SendMail($email, 'Welcome to IT Conference 2023', 'You have successfully registered for this year\'s IT Conference');
         include 'includes/successmessage.php';
     }
     else{

@@ -1,10 +1,10 @@
  
-	<div id="footer">
-	<?php echo"Copyright 20" .date ('y')?>
+	<div id="footer" class="p-3 bg-dark text-white fixed-buttom">
+    <p class="text-center">Copyright &copy; - IT Conference Attendance System <?php echo date('Y'); ?></p>
+  <?php echo"Copyright 20" .date ('y')?>
 	</div>
 	</div>
 
-</form>
 	
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -16,17 +16,9 @@
 	<script src="js/main.js" type="text/javascript"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+ 
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#dob" ).datepicker({
-        changeMonth: true,
-        changeYear: true,
-        yearRange: "-100:+0",
-        dateFormat: "yy-mm-dd"
-    });
-  } );
-  </script>
+ 
 
   </body>
 </html>

@@ -10,21 +10,30 @@ body{
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	background: linear-gradient(135deg, #fff5e6, #52143d);
+	background-color:  #67a2aa;
 }
 h1{
-	color: white;
+	color: #092d31;
 }
 .container{
-	max-width: 720px;
+	max-width: 600px;
 	width: 100%;
 	background: #fff;
 	padding: 25px 30px;
 	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
+.container1{
+	max-width: 500px;
+	width: 100%;
+	align-content: 0 auto;
+	background: #fff;
+	padding: 25px 30px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .btn {
-	background-color: #52143d;
+	background-color: #072E33;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -32,11 +41,13 @@ h1{
 	padding: 10px 25px;
 	border-radius: 30px;
 	transition: transform .4s;
+
 }
 
 .btn:hover{
-	background-color: #52143d;
-	color: white;
-	transform: scale(1.1);
-	border: 2px solid transparent;
+	border: 2px solid #072E33;
+	transition: transform .4s;
+	color: #072E33;
+	background-color: transparent;
+	cursor: pointer;
 }

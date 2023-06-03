@@ -1,6 +1,6 @@
 <?php
 
-$host = '127.0.0.1';
+$host = 'localhost';
 $db = 'attendee_db';
 $user = 'root';
 $pass = '';
@@ -23,8 +23,8 @@ $charset = 'utf8mb4';
 
     }
 
-    require_once 'db/crud.php';
-    require_once 'db/user.php';
+    require_once 'crud.php';
+    require_once 'user.php';
 
     $crud = new crud($pdo);
     $user = new user($pdo);

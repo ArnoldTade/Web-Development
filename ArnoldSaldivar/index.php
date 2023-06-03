@@ -6,6 +6,8 @@ $results = $crud->getSpecialties();
 ?>
 
 
+
+<div class="container">
 <h1 class="text-center"> Registration For IT Conference</h1>
 <form method="post" action="success.php" enctype="multipart/form-data">
     <div class="form-group">
@@ -20,27 +22,19 @@ $results = $crud->getSpecialties();
     
     <div class="form-group">
         <label for="dob">Date of Birth </label>
-        <input required type="text" class="form-control" id="dob" name="dob">
+        <input required type="date" class="form-control" id="dob" name="dob">
     </div>
 
-    
-    <div class="form-group">
-        <label for="specialty">Area of Expertise </label>
-        <select class="form-control" id="specialty" name="specialty">
-            <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
-                <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?></option>
-                <?php }?>
-        </select>
-    </div>
-    
     <div class="form-group">
         <label for="email">Email Address </label>
-        <input required type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. </small>
     </div>
+    
+    
     <div class="form-group">
         <label for="phone">Contact Number </label>
-        <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp">
+        <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
         <small id="phoneHelp" class="form-text text-muted">We'll never share your number with anyone else. </small>
     </div>
     <br/>
@@ -50,9 +44,21 @@ $results = $crud->getSpecialties();
         <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
     </div>
 
+
+    <div class="form-group">
+        <label for="specialty">Area of Expertise </label>
+        <select class="form-control" id="specialty" name="specialty">
+            <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
+                <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?>
+            </option>
+                <?php }?>
+        </select>
+    </div>
+    
+
     <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
-
+</div>
 <br>
 <br>
 <br>

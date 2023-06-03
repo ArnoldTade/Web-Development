@@ -1,4 +1,9 @@
-
+<?php
+  include_once 'includes/session.php';
+   
+  
+  ?>
+  
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,10 +28,40 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/userpagestyle.css">
+
 
    
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>SaldiVar Website</title>
+    <title>Attendance - <?php echo $title ?></title>
   </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.php">IT Conference</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          
+          <?php
+            if(!isset($_SESSION['username'])){   
+          ?>
+            <a class="nav-item nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
+          <?php } else 
+          { ?>
+            <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span> <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="logout.php">Logout <span class="sr-only">(current)</span></a>
+          <?php } ?>
+        </div>
+      </div>
+    </nav>
+    
+    <br/>
+    
   
