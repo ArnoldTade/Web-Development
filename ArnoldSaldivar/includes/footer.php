@@ -2,6 +2,8 @@
 	<div id="footer" class="p-3 bg-dark text-white fixed-buttom">
     <p class="text-center">Copyright &copy; - IT Conference Attendance System <?php echo date('Y'); ?></p>
   <?php echo"Copyright 20" .date ('y')?>
+  
+  
 	</div>
 	</div>
 

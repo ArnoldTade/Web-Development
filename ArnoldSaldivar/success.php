@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-<img src="<?php echo $destination; ?>" class="rounded-circle" style="width: 20%; height: 20%" />
+<img src="<?php echo $destination; ?>" class="rounded-circle" style="width: 20%; height: 35%" />
 <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">

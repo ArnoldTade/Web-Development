@@ -24,13 +24,13 @@ h1{
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container1{
-	max-width: 500px;
-	width: 100%;
-	align-content: 0 auto;
-	background: #fff;
-	padding: 25px 30px;
-	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	max-width: 500px;;
+	margin: 50px auto;
+  padding: 30px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+
 }
 .btn {
 	background-color: #072E33;
@@ -51,3 +51,4 @@ h1{
 	background-color: transparent;
 	cursor: pointer;
 }
+
