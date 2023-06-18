@@ -9,7 +9,8 @@ require_once 'db/conn.php';
 $results = $crud->getAttendees();
 ?>
 
-<table class="table">
+<table class="table bg-light">
+<thead class="table-dark">
     <tr>
         <th>#</th>
         <th>First Name</th>
@@ -17,6 +18,7 @@ $results = $crud->getAttendees();
         <th>Specialty</th>
         <th>Actions</th>
     </tr>
+</thead>
     <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <td><?php echo $r['attendee_id'] ?> </td>
@@ -38,6 +40,19 @@ $results = $crud->getAttendees();
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
 <br>
 <br>
 <br>

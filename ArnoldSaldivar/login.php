@@ -28,24 +28,34 @@
 <h1 class="text-center"><?php echo $title ?></h1>
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
 
-    <table class="table table-sm">
-        <tr>
-            <td><label for="username">Username: </label></td>
-            <td><input type="text" class="form-control" name="username" id="username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username']; ?>">
-            </td>
-        </tr>
-        <tr>
-            <td><label for="password">Password: </label></td>
-            <td><input type="password"  class="form-control" name="password" id="password">
-        </td>
-        </tr>
+    <div class="form-floating mb-3">
+           <label for="username">Username: </label>
+            <input type="text" class="form-control" name="username" id="username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username']; ?>" placeholder="Your username">
+</div>
+           <label for="password">Password: </label>
+            <input type="password"  class="form-control" name="password" id="password" placeholder="Your password">
+        
 
     </table><br/>
+
+
     <input type="submit" value="Login" class="btn btn-primary btn-block"><br/>
     <a href="#">Forgot Password</a>
     </form><br/>
     </div>
     <br>
+
+    <br>
+
+<br> <br>
+<br> <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <br>
+
 
 
     <?php include_once 'includes/footer.php' ?>
